@@ -1,0 +1,108 @@
+.service {
+  padding: 30px 10px 52px;
+  @include respond-to(md) {
+    padding: 60px 0;
+    background: url("/images/del/bg-list-2.png") center top no-repeat;
+    background-size: contain;
+  }
+  @include respond-to(xl) {
+    padding: 127px 0 174px;
+    background: url("/images/del/bg-list.png") center top no-repeat;
+    background-size: cover;
+  }
+
+  .content-wrap {
+    padding: 0 10px;
+    max-width: 750px;
+    @include respond-to(sm) {
+      padding: 0 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    display: inline-block;
+
+    @include respond-to(md) {
+      margin-bottom: 40px;
+      background: $black;
+    }
+    @include respond-to(xl) {
+      margin-bottom: 49px;
+    }
+
+    .white-title {
+      background: $black;
+      color: $white;
+      &:last-child {
+        display: block;
+        @include respond-to(md) {
+          padding-left: 0;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &__links {
+    .links__item {
+      margin-bottom: 30px;
+      @include respond-to(xl) {
+        margin-bottom: 36px;
+      }
+    }
+    a {
+      display: inline;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 25px;
+      text-transform: uppercase;
+      letter-spacing: 0.89px;
+      color: $brown;
+      @include respond-to(xl) {
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+      &:hover {
+        &:after {
+          right: -10px;
+        }
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        margin-left: 10px;
+        width: 27px;
+        height: 17px;
+        background: url("/images/icons/link-arrow.png") center no-repeat;
+        background-size: contain;
+        position: relative;
+        right: 0;
+        top: 4px;
+        transition: right .4s;
+      }
+    }
+  }
+}
+.service-list {
+  margin-bottom: 35px;
+  @include respond-to(md) {
+    margin-bottom: 67px;
+  }
+  @include respond-to(xl) {
+    margin-bottom: 99px;
+  }
+
+  &__item {
+    font-size: 18px;
+    font-weight: 400;
+
+    @include respond-to(md) {
+      font-size: 20px;
+    }
+    @include respond-to(xl) {
+      font-size: 22px;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.numbers {
+  padding: 30px 10px 0;
+  @include respond-to(md) {
+    padding: 80px 30px;
+  }
+  @include respond-to(xl) {
+    padding: 141px 100px;
+  }
+}
+
+.numbers-list {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1320px;
+  @include respond-to(md) {
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+  &__item {
+    margin-bottom: 39px;
+    padding: 0 10px;
+    display: inline-block;
+    max-width: 240px;
+    width: calc(50% - 20px);
+    align-self: stretch;
+    @include respond-to(sm) {
+      width: calc(50% - 40px);
+    }
+    @include respond-to(md) {
+      width: auto;
+    }
+  }
+}
+.num-item {
+  &__head {
+    padding-bottom: 14px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 60px;
+    font-size: 50px;
+    color: $red;
+    border-bottom: 3px dotted rgba($black, .3);
+    @include respond-to(md) {
+      padding-bottom: 10px;
+      font-size: 65px;
+    }
+    @include respond-to(xl) {
+      font-size: 90px;
+    }
+  }
+
+  &__dscr {
+    padding-top: 18px;
+    padding-right: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    @include respond-to(md) {
+      padding-top: 23px;
+      font-size: 18px;
+    }
+  }
+}
