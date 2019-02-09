@@ -62,6 +62,8 @@
     position: relative;
     span {
       position: absolute;
+      display: inline-block;
+      max-width: 280px;
       left: 0;
       top: -30px;
       color: $red;
