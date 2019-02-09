@@ -2,12 +2,12 @@
   padding: 30px 10px 52px;
   @include respond-to(md) {
     padding: 60px 0;
-    background: url("/images/del/bg-list-2.png") center top no-repeat;
+    background: url("../images/del/bg-list-2.png") center top no-repeat;
     background-size: contain;
   }
   @include respond-to(xl) {
     padding: 127px 0 174px;
-    background: url("/images/del/bg-list.png") center top no-repeat;
+    background: url("../images/del/bg-list.png") center top no-repeat;
     background-size: cover;
   }
 
@@ -75,7 +75,7 @@
         margin-left: 10px;
         width: 27px;
         height: 17px;
-        background: url("/images/icons/link-arrow.png") center no-repeat;
+        background: url("../images/icons/link-arrow.png") center no-repeat;
         background-size: contain;
         position: relative;
         right: 0;

@@ -82,13 +82,13 @@
   }
   &__phone {
     &:before {
-      background: url("/images/icons/phone.svg") center no-repeat;
+      background: url("../images/icons/phone.svg") center no-repeat;
       background-size: contain;
     }
   }
   &__mail {
     &:before {
-      background: url("/images/icons/mail.svg") center no-repeat;
+      background: url("../images/icons/mail.svg") center no-repeat;
       background-size: contain;
     }
   }

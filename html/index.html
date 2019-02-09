@@ -159,7 +159,7 @@
                 <form action="" class="open-form" method="post" onsubmit="submitForm(event, this)">
                     <div class="group-item">
                         <input type="text" name="formName" placeholder="Имя">
-                        <input type="email" name="formEmail" placeholder="Электронная почта">
+                        <input type="text" name="formEmail" placeholder="Электронная почта">
                     </div>
                     <div class="group-item">
                         <input type="text" name="formPhone" placeholder="Контактный телефон">
@@ -168,8 +168,9 @@
                     <input type="text" name="formMessage" placeholder="Сообщение">
 
                     <div class="open__submit">
-                        <div class="open-recaptcha"></div>
+                        <div class="g-recaptcha" data-sitekey="6LcNV5AUAAAAAMr3POeEf_z5NmFdWuq2rF5UAsTs"></div>
                         <div class="open__btn">
+                            <span class="js_error-text"></span>
                             <button class="btn" type="submit">Отправить заявку</button>
                             <div class="open__policy">Нажимая кнопку "Отправить заявку", вы даете согласие на обработку
                                 своих персонвльных данных</div>
@@ -212,19 +213,19 @@
         <div class="footer__social">
             <ul class="soc-menu">
                 <li class="soc-menu__item"><a href="javascript:;">
-                    <img src="/images/icons/vk.svg" alt="">
+                    <img src="../images/icons/vk.svg" alt="">
                 </a></li>
                 <li class="soc-menu__item"><a href="javascript:;">
-                    <img src="/images/icons/fb.svg" alt="">
+                    <img src="../images/icons/fb.svg" alt="">
                 </a></li>
                 <li class="soc-menu__item"><a href="javascript:;">
-                    <img src="/images/icons/youtube.svg" alt="">
+                    <img src="../images/icons/youtube.svg" alt="">
                 </a></li>
                 <li class="soc-menu__item"><a href="javascript:;">
-                    <img src="/images/icons/inst.svg" alt="">
+                    <img src="../images/icons/inst.svg" alt="">
                 </a></li>
                 <li class="soc-menu__item"><a href="javascript:;">
-                    <img src="/images/icons/linked.svg" alt="">
+                    <img src="../images/icons/linked.svg" alt="">
                 </a></li>
             </ul>
         </div>
@@ -242,8 +243,18 @@
 </div>
 
 
+<div class="modal">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <p>Форма отправлена!</p>
+            <p>Вывод в консоли :)</p>
+        </div>
+    </div>
+</div>
 
-<script src="js/scripts.js"></script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="dist/scripts.js"></script>
 
 
 </body>

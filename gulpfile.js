@@ -22,7 +22,8 @@ var gulp = require('gulp'),
     mainBowerFiles = require('main-bower-files'),
     browserSync = require('browser-sync').create(),
     browserSyncReload = browserSync.reload,
-    rename = require("gulp-rename");
+    rename = require("gulp-rename"),
+    babel = require('gulp-babel');
 
 var custom_path = {
     src: {
@@ -100,6 +101,14 @@ gulp.task('js:build', function () {
 
 });
 
+gulp.task('babel:build', () =>
+    gulp.src('js/scripts.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(gulp.dest('dist'))
+);
+
 gulp.task('image:build', function () {
     return gulp.src(custom_path.src.img) //Выберем наши картинки
         .pipe(gulp.dest(custom_path.build.img)) //Копируем изображения заранее, imagemin может пропустить парочку )
@@ -137,6 +146,7 @@ gulp.task('image:build_import', function () {
 gulp.task('watch', function () {
     gulp.watch([custom_path.watch.html], ['html:build']).on('change', browserSyncReload);
     gulp.watch([custom_path.watch.js], ['js:build']).on('change', browserSyncReload);
+    gulp.watch('js/scripts.js', ['babel:build']);
     gulp.watch([custom_path.watch.style], ['style:build']).on('change', browserSyncReload);
 });
 

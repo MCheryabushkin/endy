@@ -169,7 +169,7 @@
 	border-radius: 5px;
 }
 .wSelect-arrow {
-	background-image: url('../images/selectarrow.png');
+	background-image: url('..../images/selectarrow.png');
 }
 .wSelect-theme-servicesSelect.wSelect-hover,
 .wSelect-theme-servicesSelect.wSelect-active {
