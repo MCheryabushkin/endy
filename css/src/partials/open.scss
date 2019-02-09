@@ -1,0 +1,92 @@
+.open {
+  padding: 30px 10px 36px;
+  @include respond-to(md) {
+    padding: 60px 30px 77px;
+  }
+  @include respond-to(xl) {
+    padding: 100px 30px 120px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    display: inline-block;
+
+    @include respond-to(md) {
+      background: $black;
+    }
+
+    .white-title {
+      color: $white;
+      background: $black;
+      &:first-child {
+        display: block;
+        @include respond-to(md) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &__form {
+    margin: 0 auto;
+    @include respond-to(md) {
+      max-width: 940px;
+      padding: 60px 30px;
+      border: 3px dotted rgba($black, .3);
+    }
+    @include respond-to(xl) {
+      max-width: 1200px;
+    }
+  }
+  &__submit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include respond-to(md) {
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .open-recaptcha {
+      margin: 30px 0 30px;
+    }
+  }
+  &__btn {}
+  &__policy {
+    max-width: 270px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba($black, .4);
+  }
+}
+
+.open-form {
+  margin: 0 auto;
+  max-width: 784px;
+  .group-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include respond-to(md) {
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
+    input {
+      @include respond-to(md) {
+        width: calc(50% - 32px);
+      }
+    }
+  }
+  input {
+    margin-bottom: 32px;
+    @include respond-to(md) {
+      margin-bottom: 60px;
+    }
+  }
+  button {
+    margin-bottom: 19px;
+  }
+}

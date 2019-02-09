@@ -35,20 +35,7 @@
 <body>
 
 
-<!--<div class="menu-mobile">-->
-    <!--<div class="header__menu-mobile">-->
-        <!--<span></span>-->
-    <!--</div>-->
-    <!--<ul>-->
-        <!--<li><a href="javascript:;">Объекты</a></li>-->
-        <!--<li><a href="javascript:;">Компания</a></li>-->
-        <!--<li><a href="javascript:;">Как купить</a></li>-->
-        <!--<li><a href="javascript:;">Агентам</a></li>-->
-        <!--<li><a href="javascript:;">Регионам</a></li>-->
-        <!--<li><a href="javascript:;">Акции</a></li>-->
-        <!--<li><a href="javascript:;">Контакты</a></li>-->
-    <!--</ul>-->
-<!--</div>-->
+
 
 <header class="header">
     <div class="header__wrap">
@@ -58,6 +45,17 @@
             </div>
             <div class="header__name">
                 <h1 class="black-title">Франшиза</h1>
+            </div>
+
+            <div class="menu-mobile">
+                <ul>
+                    <li class="menu-mobile__item"><a href="javascript:;">Рестораны</a></li>
+                    <li class="menu-mobile__item"><a href="javascript:;">Что в меню</a></li>
+                    <li class="menu-mobile__item"><a href="javascript:;">Акции и события</a></li>
+                    <li class="menu-mobile__item"><a href="javascript:;">О нас</a></li>
+                    <li class="menu-mobile__item"><a href="javascript:;">Франшиза</a></li>
+                    <li class="menu-mobile__item"><a href="javascript:;">Контакты</a></li>
+                </ul>
             </div>
         </div>
 
@@ -120,9 +118,9 @@
     </section>
     <!-- /.service -->
 
-    <service class="condition">
+    <section class="condition">
         <div class="content-wrap">
-            <div class="condition__title">условия франшизы</div>
+            <div class="condition__title"><p class="white-title">условия</p> <p class="white-title">франшизы</p></div>
 
             <ul class="condition__list condition-list">
                 <li class="condition-list__item cond-item">
@@ -149,37 +147,33 @@
                 </li>
             </ul>
         </div>
-    </service>
+    </section>
     <!-- /.condition -->
 
 
     <section class="open">
         <div class="content-wrap">
-            <div class="open__title">открыть свой ресторан</div>
+            <div class="open__title"><p class="white-title">открыть свой</p> <p class="white-title">ресторан</p></div>
 
             <div class="open__form">
-                <form action="" class="open-form">
+                <form action="" class="open-form" method="post" onsubmit="submitForm(event, this)">
                     <div class="group-item">
-                        <input type="text">
+                        <input type="text" name="formName" placeholder="Имя">
+                        <input type="email" name="formEmail" placeholder="Электронная почта">
                     </div>
                     <div class="group-item">
-                        <input type="text">
+                        <input type="text" name="formPhone" placeholder="Контактный телефон">
+                        <input type="text" name="formCity" placeholder="Город открытия">
                     </div>
-                    <div class="group-item">
-                        <input type="text">
-                    </div>
-                    <div class="group-item">
-                        <input type="text">
-                    </div>
-                    <div class="group-item">
-                        <input type="text">
-                    </div>
+                    <input type="text" name="formMessage" placeholder="Сообщение">
 
-                    <div class="open-recaptcha"></div>
-                    <div class="open__btn">
-                        <button>Отправить заявку</button>
-                        <div class="open__policy">Нажимая кнопку "Отправить заявку", вы даете согласие на обработку
-                        своих персонвльных данных</div>
+                    <div class="open__submit">
+                        <div class="open-recaptcha"></div>
+                        <div class="open__btn">
+                            <button class="btn" type="submit">Отправить заявку</button>
+                            <div class="open__policy">Нажимая кнопку "Отправить заявку", вы даете согласие на обработку
+                                своих персонвльных данных</div>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -194,40 +188,46 @@
 <footer class="footer">
     <div class="content-wrap">
         <div class="footer__contacts contacts">
-            <div class="contacts__phone">
+            <div class="contacts__phone contacts__item">
                 <a href="tel:88007777777">8 800 777-77-77</a>
             </div>
-            <div class="contacts__mail">
+            <div class="contacts__mail contacts__item">
                 <a href="mailto:info@rest.ru">info@rest.ru</a>
             </div>
         </div>
 
-        <ul class="footer__nav nav-menu">
-            <li class="nav-menu__item"><a href="javascript:;">Рестораны</a></li>
-            <li class="nav-menu__item"><a href="javascript:;">Что в меню</a></li>
-            <li class="nav-menu__item"><a href="javascript:;">Акции и события</a></li>
-            <li class="nav-menu__item"><a href="javascript:;">О нас</a></li>
-            <li class="nav-menu__item"><a href="javascript:;">Франшиза</a></li>
-            <li class="nav-menu__item"><a href="javascript:;">Контакты</a></li>
-        </ul>
+        <div class="footer__nav">
+            <ul class="nav-menu">
+                <li class="nav-menu__item"><a href="javascript:;">Рестораны</a></li>
+                <li class="nav-menu__item"><a href="javascript:;">Что в меню</a></li>
+                <li class="nav-menu__item"><a href="javascript:;">Акции и события</a></li>
+            </ul>
+            <ul class="nav-menu">
+                <li class="nav-menu__item"><a href="javascript:;">О нас</a></li>
+                <li class="nav-menu__item"><a href="javascript:;">Франшиза</a></li>
+                <li class="nav-menu__item"><a href="javascript:;">Контакты</a></li>
+            </ul>
+        </div>
 
-        <ul class="footer__social soc-menu">
-            <li class="nav-menu__item"><a href="javascript:;">
-                <img src="" alt="">
-            </a></li>
-            <li class="nav-menu__item"><a href="javascript:;">
-                <img src="" alt="">
-            </a></li>
-            <li class="nav-menu__item"><a href="javascript:;">
-                <img src="" alt="">
-            </a></li>
-            <li class="nav-menu__item"><a href="javascript:;">
-                <img src="" alt="">
-            </a></li>
-            <li class="nav-menu__item"><a href="javascript:;">
-                <img src="" alt="">
-            </a></li>
-        </ul>
+        <div class="footer__social">
+            <ul class="soc-menu">
+                <li class="soc-menu__item"><a href="javascript:;">
+                    <img src="/images/icons/vk.svg" alt="">
+                </a></li>
+                <li class="soc-menu__item"><a href="javascript:;">
+                    <img src="/images/icons/fb.svg" alt="">
+                </a></li>
+                <li class="soc-menu__item"><a href="javascript:;">
+                    <img src="/images/icons/youtube.svg" alt="">
+                </a></li>
+                <li class="soc-menu__item"><a href="javascript:;">
+                    <img src="/images/icons/inst.svg" alt="">
+                </a></li>
+                <li class="soc-menu__item"><a href="javascript:;">
+                    <img src="/images/icons/linked.svg" alt="">
+                </a></li>
+            </ul>
+        </div>
 
         <div class="footer__policy">
             <a href="javascript:;">Политика конфиденциальности</a>
@@ -242,15 +242,6 @@
 </div>
 
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"-->
-        <!--integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="-->
-<!--crossorigin="anonymous"></script>-->
-<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
-<script src="js/libs/wow.min.js"></script>
-<script src="js/libs/slick.min.js"></script>
 
 <script src="js/scripts.js"></script>
 

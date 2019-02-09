@@ -195,3 +195,68 @@ body {
     overflow: hidden;
   }
 }
+
+input {
+  &[type="text"], &[type="email"], &[type="phone"] {
+    padding: 0 0 11px;
+    border: none;
+    border-bottom: 3px solid rgba($black, .15);
+    display: block;
+    width: 100%;
+
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    color: $black;
+    @include respond-to(md) {
+      font-size: 18px;
+    }
+
+    &:hover {
+      border-color: $black;
+    }
+    &:active, &:focus {
+      border-color: $black;
+    }
+
+    &::placeholder {
+      text-transform: none;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 60px;
+      color: rgba($black, .3);
+      @include respond-to(md) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.btn, a.btn {
+  padding: 26px 0;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  max-width: 300px;
+  width: 280px;
+  text-transform: uppercase;
+  letter-spacing: 0.94px;
+  color: $brown;
+  background: $white;
+  border: 3px solid $brown;
+  cursor: pointer;
+  text-decoration: none;
+  @include respond-to(sm) {
+    max-width: 300px;
+    width: 300px;
+  }
+
+  &:hover {
+    background: $brown;
+    color: $white;
+  }
+}

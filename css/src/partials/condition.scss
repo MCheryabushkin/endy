@@ -1,0 +1,123 @@
+.condition {
+  padding: 30px 10px 49px;
+  background: $black;
+  @include respond-to(md) {
+    padding: 60px 29px 49px;
+  }
+  @include respond-to(xl) {
+    padding: 100px 30px 113px;
+  }
+
+  &__title {
+    margin-bottom: 39px;
+    display: inline-block;
+    @include respond-to(md) {
+      margin: 0 0 180px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $white;
+    }
+    @include respond-to(xl) {
+      margin: 0 0 270px;
+    }
+
+
+    p {
+      &:last-child {
+        display: block;
+        @include respond-to(md) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.condition-list {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1320px;
+  @include respond-to(md) {
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  &__item {
+    margin-bottom: 39px;
+    padding: 0 10px;
+    display: inline-block;
+    max-width: 240px;
+    width: 100%;
+    align-self: center;
+    @include respond-to(md) {
+      align-self: stretch;
+    }
+    @include respond-to(lg) {
+      padding: 0 30px;
+    }
+  }
+}
+
+.cond-item {
+  max-width: 290px;
+  width: 100%;
+  @include respond-to(md) {
+    max-width: 310px;
+  }
+  @include respond-to(xl) {
+    max-width: 360px;
+  }
+  &__top {
+    padding-bottom: 14px;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 3px dotted rgba($white, .3);
+    @include respond-to(md) {
+      padding-bottom: 20px;
+    }
+  }
+  &__num {
+    margin-right: 10px;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: $white;
+    @include respond-to(md) {
+      font-size: 65px;
+    }
+    @include respond-to(xl) {
+      font-size: 90px;
+    }
+  }
+  &__value {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 0.89px;
+    color: $white;
+    @include respond-to(md) {
+      line-height: 35px;
+    }
+    @include respond-to(xl) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  &__bot {
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $white;
+    @include respond-to(xl) {
+      font-size: 18px;
+    }
+  }
+}
