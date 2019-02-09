@@ -225,7 +225,7 @@ input {
       text-transform: none;
       font-size: 16px;
       font-weight: 400;
-      line-height: 60px;
+      line-height: 20px;
       color: rgba($black, .3);
       @include respond-to(md) {
         font-size: 18px;

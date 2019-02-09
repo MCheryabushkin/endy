@@ -13,7 +13,7 @@ var openMenu = function () {
         menuCounter = 1;
     } else {
         menu.style.left = -9999 + 'px';
-        body.style = 'scroll';
+        body.style.overflow = 'scroll';
         menuToggle.classList.remove('opened');
         menuCounter = 0;
     }
@@ -27,6 +27,6 @@ var closeMenu = function () {
 };
 
 menuToggle.addEventListener("click", openMenu);
-menuItem.forEach(function (elem) {
-    elem.addEventListener("click", closeMenu);
-});
+for (let i = 0; i < menuItem.length; i++) {
+    menuItem[i].addEventListener("click", closeMenu);
+}
